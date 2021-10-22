@@ -11,12 +11,13 @@ const {cart, setTotal, disableBtn, disableBtn2} = useContext (ItemContext)
 
 const [check, setCheck] = useState(false);
 
+const [returnId, setReturnId] = useState([]);
 
 
 const subtotal=[0];
 
 
-cart.map((c) => { subtotal.push (c.subT)})
+cart.map((c) => { return subtotal.push (c.subT)})
 
 const reducer = (previousValue, currentValue) => previousValue + currentValue;
 const total = subtotal.reduce(reducer) ;
@@ -29,7 +30,17 @@ setTotal (total);
        
       await db.collection('compras').doc().set(subProducts);
   
-      setCheck(true);  }
+      setCheck(true);
+     
+      db.collection('compras').limit(1).onSnapshot((querySnapshot) => {
+        
+           querySnapshot.forEach ((doc) => { 
+        
+                setReturnId ( { ...doc.data(), id: doc.id } ) ; }) } 
+               
+               ) ; }
+
+               
  
 return (
 
@@ -41,13 +52,12 @@ return (
       </div>
  
       <div>
-           { check ?  <p>el comprobante de su compra es</p>  : <TableWidget/>  } 
       </div>
  
+           { check ?  <p>el id de su compra es : <strong> {returnId.id} </strong> </p>  : <TableWidget/>  } 
 </div>
   
 )
-
 
     
 }

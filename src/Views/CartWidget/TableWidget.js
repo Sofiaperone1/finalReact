@@ -40,8 +40,8 @@ const TableWidget = () => {
                 {row.name}
               </TableCell>
               <TableCell align="right">{row.cantidad}</TableCell>
-              <TableCell align="right">{row.price}</TableCell>
-              <TableCell align="right">{row.subT}</TableCell>
+              <TableCell align="right">${row.price}</TableCell>
+              <TableCell align="right">${row.subT}</TableCell>
               <TableCell align="right"> <Checkbox {...label} /></TableCell>
             </TableRow>
           ))}
@@ -57,7 +57,7 @@ const TableWidget = () => {
       <TableCell align="right"></TableCell>
       <TableCell align="right"></TableCell>
       <TableCell align="right"></TableCell>
-      <TableCell align="right">{Total}</TableCell>
+      <TableCell align="right">${Total}</TableCell>
     </TableRow>
   </TableHead>
   
