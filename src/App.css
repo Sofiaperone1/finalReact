@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Yaldevi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* HOME */
+
+.somosCard , .prodCard  {margin-top: 20px;  }
+
+.CardsHomeContainer {display: flex; justify-content: space-evenly; margin-bottom: 25px; }
+
+
+
+.MuiPaper-root.MuiPaper-outlined.MuiPaper-rounded.MuiCard-root.somosCard.css-ua0shy-MuiPaper-root-MuiCard-root , .MuiPaper-root.MuiPaper-outlined.MuiPaper-rounded.MuiCard-root.prodCard.css-ua0shy-MuiPaper-root-MuiCard-root { max-width: 500px ; height: 200px;}
+
+/* PRODUCTOS */
+
+.ItemListContainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+margin-top: 5%;}
+
+.ItemList {width: 100%;}
+ .ItemListCarts {display: flex;
+  margin-left: 2%;
+  margin-top: 3%;
+  flex-wrap: wrap;
+  justify-content: center;}
+
+.ItemList a {width: 18%;}
+.ItemList div {margin-bottom: 20px; text-align: center; }
+.MuiPaper-root.MuiCard-root.makeStyles-root-4.MuiPaper-elevation1.MuiPaper-rounded {max-width: 200px; height: 300px;}
+.MuiPaper-root.MuiCard-root.makeStyles-root-4.MuiPaper-elevation1.MuiPaper-rounded .MuiCardContent-root { padding: 5px;}
+.filtroIL Button {margin-right: 1%; background-color: burlywood; box-shadow: 3px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);}
+.filtroIL Button:hover {background-color: rgb(214, 142, 49); }
+.filtroIL h3 {font-family: 'Yaldevi', sans-serif; }
+h2.MuiTypography-root.MuiTypography-h5.MuiTypography-gutterBottom { font-family:'Amatic SC', cursive; font-size: 32px; }
+p.MuiTypography-root.MuiTypography-body2.MuiTypography-colorTextSecondary {font-family:'Amatic SC', cursive; font-size: 20px; color: rgba(0, 0, 0, 0.87);  }
+
+
+
+/* ITEM DETAIL */
+
+
+.itemDetailCont { display: flex; margin-top: 10%; justify-content: space-evenly;} 
+.contDescriptDetail {
+   width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.contDescriptDetail h4, h6, h5 {font-family: 'Yaldevi', sans-serif; 
+ 
+}
+.img-detail  { width: 100%; text-align:center; margin-top: 2%;}
+.img-detail img { width: 90%;}
+.MuiDivider-root.MuiDivider-fullWidth.MuiDivider-vertical.MuiDivider-flexItem.MuiDivider-withChildren.MuiDivider-withChildrenVertical.css-d7gmiq-MuiDivider-root { margin-right: 2%;}
+
+
+
+/*CONTADOR */
+
+
+#InitalCount { color: black;}
+.Contador { display: flex; flex-direction: row; background-color: white; width: 200px; justify-content: space-evenly;
+  align-items: center ; border:2px solid #00000069; margin-bottom:1%;margin-right: 5px; }
+#addButton, #removeButton { background-color:#26a69a ;}
+.ItemCount {    display: flex;
+  flex-direction: column;
+margin-top: 3%;
+  align-items: center;
+ }
+  .addToCart .btn { margin-top: 2%; margin-right: 1%; width: 200px;}
+  .addToCart {
+     text-align:-webkit-center;
+}
+/* NAVBAR */ 
+
+#Navbar {background-image:url("./Imagenes/fondoNaranja2.jpg"); position: fixed;  top: 0px;}
+.Productos, .Contactanos , .ShoppingCart { color: rgb(245, 244, 244); margin-right: 10px;margin-left: 10px; font-weight: 550;}
+.linkContainerNav { display: flex; margin-right: 15px; width: 25%; font-family: 'Yaldevi', sans-serif; font-size: 18px;}
+#logoGea { color: white;font-family: 'Bonheur Royale', cursive; font-size: 40px;margin-left: 50px;}
+nav.MuiTypography-root.MuiTypography-body1.MuiBreadcrumbs-root.linkContainerNav.css-63vwl1-MuiTypography-root-MuiBreadcrumbs-root {background-color: transparent;}
+nav.MuiTypography-root.MuiTypography-body1.MuiBreadcrumbs-root.linkContainerNav.css-63vwl1-MuiTypography-root-MuiBreadcrumbs-root {box-shadow: none;}
+
+
+
+/* CAROUSEL */
+
+.container-slider {
+  max-width: 97%;
+  height:450px;
+  margin: 7% auto 0;
+  margin-bottom: 25px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 700px){
+  .container-slider {
+    margin: 100px 10px 0;
+  }
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity ease-in-out 0.4s;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.active-anim {
+  opacity: 1;
+}
+
+.container-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #f1f1f1;
+  margin: 0 10px;
+  background: #f1f1f1;
+}
+.dot.active {
+  background: rgba(32, 32, 32, 0.397);
+}
+
+
+/* FORM */
+
+form {  width: 0%; display: flex; flex-direction: column; margin-right: 10%;
+  }
+
+  .formText .MuiFormControl-root.MuiTextField-root.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {margin-right: 3%; margin-left: 2%;}
+
+  .MuiFormControl-root.MuiTextField-root.coments.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {width: 77%;}  
+
+  .css-e53awj-MuiStack-root {margin-top: 4% ; margin-bottom:2%;}
+
+.contactForm {
+
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.formText div label{ font-family:  'Yaldevi', sans-serif;
+font-size: 18px;}
+/* CART WIDGET */
+
+.cartWidget { margin-top: 10%;
+  display: flex;
+  justify-content: space-evenly;}
+
+.section1CW {     display: flex;
+    flex-direction: column; margin-top: 2%;}
+
+.cartWidgetForm { display: flex;
+      align-self: center ; margin-bottom: 5%; }
+
+.img-widget img {width: 400px;}
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiTableContainer-root.css-11xur9t-MuiPaper-root-MuiTableContainer-root {width: 100%; height: min-content;}
+
+.TableWidget{margin-top: 5%;}
