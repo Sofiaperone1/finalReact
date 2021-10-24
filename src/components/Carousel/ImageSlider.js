@@ -19,7 +19,7 @@ const ImageSlider = () => {
                                     className={slideIndex === index + 1 ? "slide active-anim" : "slide"} 
                                     key={obj.id}>
 
-                                    <img src={process.env.PUBLIC_URL + `/Imgs/img${index + 1}.png` } />  
+                                    <img alt="carousel" src={process.env.PUBLIC_URL + `Imgs/img${index + 1}.jpg` } />  
 
                                     </div>
 

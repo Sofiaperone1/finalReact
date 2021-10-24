@@ -6,6 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
+import {NavLink} from "react-router-dom"
 
 const Home = () => {
     
@@ -23,8 +24,7 @@ const Home = () => {
       Quienes somos?
       </Typography>
       <Typography variant="body2" color="text.secondary">
-        Lizards are a widespread group of squamate reptiles, with over 6,000
-        species, ranging across all continents except Antarctica
+      Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
       </Typography>
     </CardContent>
     <CardActions>
@@ -42,13 +42,12 @@ const Home = () => {
      Nuestros productos:
       </Typography>
       <Typography variant="body2" color="text.secondary">
-        Lizards are a widespread group of squamate reptiles, with over 6,000
-        species, ranging across all continents except Antarctica
+        Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
       </Typography>
     </CardContent>
     <CardActions>
-      
-      <Button size="small">Ir a productos</Button>
+    <NavLink to="/productos" className="Productos" ><Button size="small">Ir a productos</Button></NavLink>
+
     </CardActions>
   </Card>
   </div>

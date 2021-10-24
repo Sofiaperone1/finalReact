@@ -43,6 +43,7 @@
 
 .CardsHomeContainer {display: flex; justify-content: space-evenly; margin-bottom: 25px; }
 
+.MuiPaper-root.MuiPaper-outlined.MuiPaper-rounded.MuiCard-root.somosCard.css-ua0shy-MuiPaper-root-MuiCard-root{background-image: url("./Imagenes/fondoNaranja.jpg");}
 
 
 .MuiPaper-root.MuiPaper-outlined.MuiPaper-rounded.MuiCard-root.somosCard.css-ua0shy-MuiPaper-root-MuiCard-root , .MuiPaper-root.MuiPaper-outlined.MuiPaper-rounded.MuiCard-root.prodCard.css-ua0shy-MuiPaper-root-MuiCard-root { max-width: 500px ; height: 200px;}
