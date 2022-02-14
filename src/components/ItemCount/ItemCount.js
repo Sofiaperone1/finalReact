@@ -6,9 +6,9 @@ import {useState} from "react"
 
 import { ItemContext } from "../CartContext/CartContext";
 import { NavLink } from "react-router-dom";
-import Alert from '@mui/material/Alert';
+
 import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
+
 
 const ItemCount = ({sendData}) => {
  
@@ -17,6 +17,7 @@ const {onAdd, addBtn, setAddBtn} = useContext(ItemContext)
 
 const [counter, setCounter] = useState (0); 
 
+const mostrarAlert = () => {console.log("alert")}
 
 const sumarUno = () => {
     if (counter < 3 ) {
@@ -48,10 +49,7 @@ const sumarUno = () => {
     
      {counter === 0 ? <Button disabled onClick={()=> onAdd (sendData,counter)} > Agregar al carrito</Button> : <Button onClick={()=> onAdd (sendData,counter)} > Agregar al carrito</Button>}
    
-    <div>{addBtn ?  <Stack sx={{ width: '100%' }} spacing={2}>
-                    <Alert onClose={() => {setAddBtn(false)}}>Tu compra se agrego exitosamente!</Alert>
-                    </Stack> 
-                  : ""}</div>
+  
                     
    <NavLink to={"/cartWidget"}> <Button> Ir al carrito </Button> </NavLink>
      

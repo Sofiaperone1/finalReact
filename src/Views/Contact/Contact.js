@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import contacto1 from "../../Imagenes/contacto1.png"
+import contacto1 from "../../Imagenes/contacto1.jpg"
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
@@ -10,17 +10,19 @@ const Contact = () => {
     
 
         return (
-         <div className="contactForm">
-            <Box 
+         <div className="contactView">
+           
+       <div className="contactForm">
+       <Box 
             className="formBox"
               component="form"
               sx={{
-                '& > :not(style)': { m: 2, width: '65ch' },
+                '& > :not(style)': { m: 2, width: '23ch' },
               }}
               noValidate
               autoComplete="off"
             >
-        <div className="formText">
+        <div className="formInputs">
                  <TextField  required id="standard-basic" label="Nombre y Apellido" variant="standard" />
                  <TextField type="number" required id="standard-basic" label="Edad" variant="standard" 
                             inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}/> 
@@ -30,8 +32,8 @@ const Contact = () => {
   
           
          </div>   
-          <div>
-               <TextField className="coments"
+          <div className="coments">
+               <TextField 
           id="outlined-multiline-static"
           label="Escriba su comentario aqui:"
           multiline
@@ -40,12 +42,14 @@ const Contact = () => {
           defaultValue="Hola Gea, queria consultar "
         />
                 <Stack direction="row" spacing={2}>
-                    <Button variant="outlined">Enviar</Button>
+                    <Button id="sendFContact" variant="outlined">Enviar</Button>
                 </Stack>
 
              </div>
-            </Box>
-            <img alt="img-contacto" src={contacto1} width="32%" ></img> 
+             </Box>
+             </div>
+           
+            <img className="contactImg"  alt="img-contacto" src={contacto1} width="32%" height="45%" ></img> 
             </div>
            
       
@@ -55,6 +59,3 @@ const Contact = () => {
 }
 
 export default Contact
-
-// AGREGAR INPUT PROVINCIA Y LOCALIDAD
-

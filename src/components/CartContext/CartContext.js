@@ -1,5 +1,6 @@
 import React , {useState, createContext} from "react";
 import {db} from '../../firebase';
+import swal from "sweetalert";
 
  // 1- Creamos el contexto
 
@@ -27,13 +28,26 @@ export const CartContext = ({children}) => {
       
        const [cart, setCart] = useState([]);
 
+       const [returnId, setReturnId] = useState([]); 
+
+       const alert = () => {swal({
+        title: "Producto agregado al carrito",
+        timer :"1300" ,
+        icon: "success",
+        button: null,
+        className: "myClass"
+      });}
        const onAdd =  (product,counter) => {
         
             const newProduct = {...product, cantidad: counter, subT: counter*product.price};
            
+
             setCart ([...cart, newProduct]); 
             setAddBtn(true);
             setDisableBtn2(true);
+            alert();
+           
+            
         }
            
           
@@ -44,7 +58,9 @@ export const CartContext = ({children}) => {
 
 return (    
 
-    <ItemContext.Provider value={{disableBtn2, setDisableBtn2,addBtn,setAddBtn, cart, setCart, onAdd, Total, setTotal, user,setUser,disableBtn, setDisableBtn}} >
+    <ItemContext.Provider value={{disableBtn2, setDisableBtn2,addBtn,setAddBtn, cart,
+                                 setCart, onAdd, Total, setTotal, user,setUser,disableBtn,  
+                                 setDisableBtn, returnId, setReturnId}} >
 
         {children}
     </ItemContext.Provider>

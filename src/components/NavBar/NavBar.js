@@ -40,7 +40,7 @@ export default function ButtonAppBar() {
           </Typography>
          
          <Breadcrumbs aria-label="breadcrumb" className="linkContainerNav">
-        
+          <NavLink to="/" className="Productos" >Inicio</NavLink>
           <NavLink to="/productos" className="Productos" >Productos</NavLink>
           <NavLink to="/contact" className="Contactanos" >Contactanos</NavLink>
           <NavLink to="/cartWidget" className="ShoppingCart " ><ShoppingCartIcon/></NavLink>

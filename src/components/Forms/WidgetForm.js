@@ -22,7 +22,7 @@ const WidgetForm = () => {
             setUser({
                 name: name,
                 email: email1 })
-    console.log ("es igual")
+    
     setDisableBtn (true);
         }else {
             alert("Porfavor revise su informacion de contacto");
@@ -33,11 +33,11 @@ const WidgetForm = () => {
 return (
         <div className="cartWidgetForm">
              <div >
-                 {user.name ? <h6>Bienvenidx! Finalize la compra y reciba su comprobante </h6> : <h6>Ingrese sus datos para continuar</h6>}
+                 {user.name ? <h6> Bienvenidx {user.name} <br/> Finalize la compra y reciba su comprobante </h6> : <h6>Por favor ingrese sus datos para continuar</h6>}
                 
                  {user.name ?
                 <div className="userName">
-                <Alert onClose={() => {setAddBtn(false)}}>Tus datos se enviaron exitosamente!</Alert>
+                <Alert onClose={() => {setAddBtn(false)}}>Tus datos se enviaron exitosamente</Alert>
                 </div>
             :
                 <div className="CWFcontent">
@@ -53,7 +53,7 @@ return (
                     <TextField id="outlined-basic" onChange={handleEmail1} label="Email" variant="outlined" />
                     <TextField id="outlined-basic" onChange={handleEmail2} label="Verifique email" variant="outlined" />
                    
-                    <Button onClick={() => {verification(name, email1 , email2)}}>Ingresar datos</Button>
+                    <Button id="formButton" onClick={() => {verification(name, email1 , email2)}}>Ingresar datos</Button>
                     </Box>
                 </div>
             }

@@ -6,64 +6,85 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import {useContext} from "react";
+import {useContext, useState, Fragment} from "react";
 import { ItemContext } from '../../components/CartContext/CartContext';
 import DeleteIcon from '@mui/icons-material/Delete';
-import Checkbox from '@mui/material/Checkbox';
+
+
+import "./table.css";
+import ReadOnlyRow from "./ReadOnlyRow";
 
 const TableWidget = () => {
 
-    const {cart, Total} = useContext(ItemContext)
-    const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+    const {cart,setCart, Total} = useContext(ItemContext)
+   
+    const [contacts, setContacts] = useState(cart);
+  
+  
+    const handleDeleteClick = (contactId) => {
+      const newContacts = [...contacts];
+  
+      const index = contacts.findIndex((contact) => contact.id === contactId);
+  
+      newContacts.splice(index, 1);
+  
+      setContacts(newContacts);
 
-  return (
-<div className="TableWidget">
-
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Producto</TableCell>
-            <TableCell align="right">Cantidad</TableCell>
-            <TableCell align="right">Precio</TableCell>
-            <TableCell align="right">Subtotal</TableCell>
-            <TableCell align="right"><DeleteIcon/></TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {cart.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="right">{row.cantidad}</TableCell>
-              <TableCell align="right">${row.price}</TableCell>
-              <TableCell align="right">${row.subT}</TableCell>
-              <TableCell align="right"> <Checkbox {...label} /></TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer> 
+      setCart (newContacts);
+    };
+  
+    return (
+      <div className="TableWidget">
+      <div className="app-container">
+        <form >
+          <table>
+            <thead >
+              <tr className="cartTable">
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Subtotal</th>
+                <th>Eliminar</th>
+              </tr>
+            </thead>
+            <tbody>
+              {contacts.map((contact) => (
+                <Fragment>
+                
+                    <ReadOnlyRow
+                      contact={contact}
+                    
+                      handleDeleteClick={handleDeleteClick}
+                    />
+                 
+                </Fragment>
+              ))}
+            </tbody>
+          </table>
+        </form>
+  
+       
+      </div>
+  
 
 <TableContainer component={Paper}>
-<Table sx={{ minWidth: 650 }} aria-label="simple table">
-  <TableHead>
-    <TableRow>
-      <TableCell>Total:</TableCell>
-      <TableCell align="right"></TableCell>
-      <TableCell align="right"></TableCell>
-      <TableCell align="right"></TableCell>
-      <TableCell align="right">${Total}</TableCell>
-    </TableRow>
-  </TableHead>
-  
-</Table>
+
+<table>
+            <thead>
+              <tr className='totalTable'>
+                <th>Total:</th>
+            
+                <th className='tot2'>${Total}</th>
+              </tr>
+            </thead>
+         
+          </table>
+
 </TableContainer>
 
+
+
+   
 </div>
 
 

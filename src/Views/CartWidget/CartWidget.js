@@ -4,15 +4,16 @@ import { ItemContext } from "../../components/CartContext/CartContext";
 import Button from '@mui/material/Button';
 import WidgetForm from "../../components/Forms/WidgetForm"
 import {db} from '../../firebase';
+import Ticket from "./Ticket"
 
 const CartWidget = () => {
 
-const {cart, setTotal, disableBtn, disableBtn2} = useContext (ItemContext)
+const {cart, setTotal, disableBtn, disableBtn2, returnId, setReturnId} = useContext (ItemContext)
 
 const [check, setCheck] = useState(false);
 
-const [returnId, setReturnId] = useState([]);
 
+ 
 
 const subtotal=[0];
 
@@ -36,25 +37,34 @@ setTotal (total);
         
            querySnapshot.forEach ((doc) => { 
         
-                setReturnId ( { ...doc.data(), id: doc.id } ) ; }) } 
+                setReturnId ( { ...doc.data(), id: doc.id } ) ; 
+               
+            
+            }) } 
                
                ) ; }
 
-               
+
+              
+            
+               //<p>El ID de su compra es : <strong> {returnId.id} </strong> </p>
  
 return (
 
   <div className="cartWidget">
+    
    
-       <div className="section1CW">
             <WidgetForm/>
-           { disableBtn && disableBtn2 ?  <Button  className="finalizarButton" onClick={finalize} variant="outlined">Finalizar compra</Button>  :  <Button disabled className="finalizarButton" onClick={finalize} variant="outlined">Finalizar compra</Button>  }
-      </div>
+          
+      
+      <div className="tableWidget">
+   
+   { check ? <Ticket/> :  <TableWidget/>  } 
+   { disableBtn && disableBtn2 ?  <Button  className="finalizarButton" onClick={finalize} variant="outlined">Finalizar compra</Button>  :  <Button disabled className="finalizarButton" onClick={finalize} variant="outlined">Finalizar compra</Button>  }
+   </div>
+     
  
-      <div>
-      </div>
- 
-           { check ?  <p>el id de su compra es : <strong> {returnId.id} </strong> </p>  : <TableWidget/>  } 
+           
 </div>
   
 )

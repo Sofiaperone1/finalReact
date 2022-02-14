@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Yaldevi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -43,10 +44,10 @@
 
 .CardsHomeContainer {display: flex; justify-content: space-evenly; margin-bottom: 25px; }
 
-.MuiPaper-root.MuiPaper-outlined.MuiPaper-rounded.MuiCard-root.somosCard.css-ua0shy-MuiPaper-root-MuiCard-root{background-image: url("./Imagenes/fondoNaranja.jpg");}
-
-
-.MuiPaper-root.MuiPaper-outlined.MuiPaper-rounded.MuiCard-root.somosCard.css-ua0shy-MuiPaper-root-MuiCard-root , .MuiPaper-root.MuiPaper-outlined.MuiPaper-rounded.MuiCard-root.prodCard.css-ua0shy-MuiPaper-root-MuiCard-root { max-width: 500px ; height: 200px;}
+.MuiTypography-root.MuiTypography-h5.MuiTypography-gutterBottom.css-h93ljk-MuiTypography-root {font-family: 'Lora', serif; color:black;}
+p.MuiTypography-root.MuiTypography-body2.css-r40f8v-MuiTypography-root {font-family: 'Lora', serif;}
+button.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButtonBase-root.css-1knaqv7-MuiButtonBase-root-MuiButton-root {color: #a92a07;}
+.MuiPaper-root.MuiPaper-outlined.MuiPaper-rounded.MuiCard-root.somosCard.css-ua0shy-MuiPaper-root-MuiCard-root , .MuiPaper-root.MuiPaper-outlined.MuiPaper-rounded.MuiCard-root.prodCard.css-ua0shy-MuiPaper-root-MuiCard-root { max-width: 500px ; height: 200px; background-color: #c37e7e14;}
 
 /* PRODUCTOS */
 
@@ -118,9 +119,7 @@ margin-top: 3%;
 .Productos, .Contactanos , .ShoppingCart { color: rgb(245, 244, 244); margin-right: 10px;margin-left: 10px; font-weight: 550;}
 .linkContainerNav { display: flex; margin-right: 15px; width: 25%; font-family: 'Yaldevi', sans-serif; font-size: 18px;}
 #logoGea { color: white;font-family: 'Bonheur Royale', cursive; font-size: 40px;margin-left: 50px;}
-nav.MuiTypography-root.MuiTypography-body1.MuiBreadcrumbs-root.linkContainerNav.css-63vwl1-MuiTypography-root-MuiBreadcrumbs-root {background-color: transparent;}
-nav.MuiTypography-root.MuiTypography-body1.MuiBreadcrumbs-root.linkContainerNav.css-63vwl1-MuiTypography-root-MuiBreadcrumbs-root {box-shadow: none;}
-
+nav.MuiTypography-root.MuiTypography-body1.MuiBreadcrumbs-root.linkContainerNav.css-63vwl1-MuiTypography-root-MuiBreadcrumbs-root {background-color: transparent;box-shadow: none; width: 30%;font-family: 'Yaldevi'; font-size: 1.1rem;}
 
 
 /* CAROUSEL */
@@ -176,40 +175,55 @@ nav.MuiTypography-root.MuiTypography-body1.MuiBreadcrumbs-root.linkContainerNav.
 
 
 /* FORM */
-
-form {  width: 0%; display: flex; flex-direction: column; margin-right: 10%;
+#sendFContact {margin-top: 17%;}
+.contactView { width:100% ; height: 100%; display: flex; margin-top:5%; justify-content: center;}
+.contactForm {    width: 40%; }
+.formBox {display: flex; 
+  flex-direction: column}
+.formInputs {display: flex;
+  flex-direction: column;
   }
+  .MuiFormControl-root.MuiTextField-root.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {width: 100%;}
+  .css-e53awj-MuiStack-root {margin-top: 25%;}
+  .MuiFormControl-root.MuiTextField-root.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {width: 100%;
+    height: 55px; margin-bottom:6%}
+    button.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeMedium.MuiButton-outlinedSizeMedium.MuiButtonBase-root.css-1rwt2y5-MuiButtonBase-root-MuiButton-root {margin-top: 5%;
+      border: 1px solid rgb(155 31 5);
+      color: #9d2405;
+      font-family: 'Lora', serif;
+      font-weight: 900;
+      display: flex;
+      align-self: center}
+      label#standard-basic-label {font-size: 13px; font-family:'Lora', serif;}
+      button.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeMedium.MuiButton-outlinedSizeMedium.MuiButtonBase-root.css-1rwt2y5-MuiButtonBase-root-MuiButton-root:hover {background-color: #a664268f;}
+.contactImg {margin-top: 2%; width: 30%;}
+label#outlined-multiline-static-label {font-family:'Lora', serif; font-size: 19px;}
 
-  .formText .MuiFormControl-root.MuiTextField-root.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {margin-right: 3%; margin-left: 2%;}
-
-  .MuiFormControl-root.MuiTextField-root.coments.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {width: 77%;}  
-
-  .css-e53awj-MuiStack-root {margin-top: 4% ; margin-bottom:2%;}
-
-.contactForm {
-
-  margin-top: 10%;
-  display: flex;
-  justify-content: space-around;
-  
-}
-
-.formText div label{ font-family:  'Yaldevi', sans-serif;
-font-size: 18px;}
 /* CART WIDGET */
 
-.cartWidget { margin-top: 10%;
+.cartWidget {display: flex;
+  margin-top: 10%;
+  width: 100%;
+justify-content: space-evenly;}
+
+.cartWidgetForm {width: 20%;text-align: center;
+}
+#formButton {border: 1px solid rgb(155 31 5);
+  color: #9d2405;
+  font-family: 'Lora', serif;
+  font-weight: 900;
   display: flex;
-  justify-content: space-evenly;}
+  align-self: center}
+#formButton:hover {background-color:#9d230536;}
 
-.section1CW {     display: flex;
-    flex-direction: column; margin-top: 2%;}
+.cartWidgetForm h6 {margin-bottom: 6%}
+.tableWidget{width: 45% ; display:flex ; flex-direction: column;}  
+form.MuiBox-root.css-xn6ruc {display: flex; flex-direction: column; }
+.finalizarButton {width: 50%;}
 
-.cartWidgetForm { display: flex;
-      align-self: center ; margin-bottom: 5%; }
+/* ALERT DEL COUNT */
+.myClass{
+  width:400px;
+  height:200px;
+}
 
-.img-widget img {width: 400px;}
-
-.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiTableContainer-root.css-11xur9t-MuiPaper-root-MuiTableContainer-root {width: 100%; height: min-content;}
-
-.TableWidget{margin-top: 5%;}
